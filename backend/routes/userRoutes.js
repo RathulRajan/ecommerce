@@ -40,7 +40,7 @@ router.post("/user/login", async (req, res) => {
     if (passMatch) {
       const token = jwt.sign(
         { userId: user._id, role: "User" },
-        "asdfghjklpoiuytr"
+        process.env.JWT_SECRET
       );
       return res.status(200).json({ token, userId: user._id, role: "User" });
     }
