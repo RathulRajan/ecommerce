@@ -14,7 +14,9 @@ const Listproducts = () => {
   const navigate = useNavigate();
 
   const getProduct = async () => {
-    const response = await axios.get("http://localhost:5000/product");
+    const response = await axios.get(
+      "https://ecommerce-crud-z2v6.onrender.com/product"
+    );
     setItems(response.data);
   };
 
@@ -24,7 +26,9 @@ const Listproducts = () => {
 
   const deleteProduct = async (id) => {
     try {
-      await axios.delete(`http://localhost:5000/product/${id}`);
+      await axios.delete(
+        `https://ecommerce-crud-z2v6.onrender.com/product/${id}`
+      );
       toast.success(" deleted ");
       getProduct();
     } catch (e) {

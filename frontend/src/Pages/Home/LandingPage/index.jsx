@@ -31,13 +31,13 @@ const LandingPage = ({ product }) => {
 
   const getProductShoe = async () => {
     const response = await axios.get(
-      "http://localhost:5000/product/category/65a3890342e317363364d8e9"
+      "https://ecommerce-crud-z2v6.onrender.com/product/category/65a3890342e317363364d8e9"
     );
     setShoesData(response.data);
   };
   const getProductBag = async () => {
     const response = await axios.get(
-      "http://localhost:5000/product/category/65a4006409f756e679dd28f9"
+      "https://ecommerce-crud-z2v6.onrender.com/product/category/65a4006409f756e679dd28f9"
     );
     setBagsData(response.data);
   };

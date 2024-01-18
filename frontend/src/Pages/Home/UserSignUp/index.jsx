@@ -19,7 +19,10 @@ const UserSignUp = () => {
   };
   const onSubmit = async () => {
     try {
-      const response = await axios.post("http://localhost:5000/register", cred);
+      const response = await axios.post(
+        "https://ecommerce-crud-z2v6.onrender.com/register",
+        cred
+      );
 
       navigate("/user/login");
     } catch (e) {

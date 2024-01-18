@@ -18,7 +18,7 @@ const AdminLogin = () => {
   const onSubmit = async () => {
     try {
       const response = await axios.post(
-        "http://localhost:5000/admin/login",
+        "https://ecommerce-crud-z2v6.onrender.com/admin/login",
         credtwo
       );
       const { token, userId, role } = response.data;

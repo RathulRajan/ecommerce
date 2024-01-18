@@ -26,7 +26,9 @@ const PostProducts = () => {
   const [category, setCategory] = useState([]);
 
   const fetchCategory = async () => {
-    const response = await axios.get("http://localhost:5000/category");
+    const response = await axios.get(
+      "https://ecommerce-crud-z2v6.onrender.com/category"
+    );
     const op = response.data.map((item) => {
       return { label: item.name, value: item._id };
     });
@@ -41,7 +43,9 @@ const PostProducts = () => {
   }, []);
 
   const fetchProducts = async () => {
-    const response = await axios.get(`http://localhost:5000/product/${id}`);
+    const response = await axios.get(
+      `https://ecommerce-crud-z2v6.onrender.com/product/${id}`
+    );
     setProducts(response.data);
     const {
       name,
@@ -57,7 +61,10 @@ const PostProducts = () => {
 
   const editProduct = async () => {
     try {
-      await axios.patch(`http://localhost:5000/product/${id}`, products);
+      await axios.patch(
+        `https://ecommerce-crud-z2v6.onrender.com/product/${id}`,
+        products
+      );
       navigate("/admin");
     } catch (e) {
       e.message;
@@ -88,7 +95,10 @@ const PostProducts = () => {
 
   const post = async () => {
     try {
-      await axios.post("http://localhost:5000/product", products);
+      await axios.post(
+        "https://ecommerce-crud-z2v6.onrender.com/product",
+        products
+      );
       navigate("/admin");
     } catch (e) {}
   };
@@ -160,7 +170,7 @@ const PostProducts = () => {
             <label>Image</label>
             <Upload
               name="file"
-              action="http://localhost:5000/upload"
+              action="https://ecommerce-crud-z2v6.onrender.com/upload"
               onChange={onUploadChange}
             >
               <Button style={{ width: "200px" }} icon={<UploadOutlined />}>
