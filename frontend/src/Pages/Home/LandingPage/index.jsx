@@ -5,7 +5,7 @@ import { Card, Input, Button } from "antd";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 const { Meta } = Card;
-import { CartContext } from "../../../context";
+import { CartContext } from "../../../context/context";
 
 import "./landingpage.css";
 

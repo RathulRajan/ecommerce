@@ -1,10 +1,10 @@
 import React, { useContext } from "react";
 import NavbarCopy from "../../../Components/NavBarCopy";
 import { NavLink } from "react-router-dom";
-import { CartContext } from "../../../context";
 import { Button, Table } from "antd";
+
 import { DeleteOutlined, EditOutlined } from "@ant-design/icons";
-import { useEffect } from "react";
+import { CartContext } from "../../../context/context";
 
 const Cart = () => {
   const { cart, setCart } = useContext(CartContext);

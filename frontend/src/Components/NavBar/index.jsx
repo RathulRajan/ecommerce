@@ -1,6 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import { NavLink } from "react-router-dom";
-import { CartContext } from "../../context";
+import { CartContext } from "../../context/context";
 import { useContext } from "react";
 import "./navbar.css";
 

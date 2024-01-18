@@ -4,7 +4,7 @@ import App from "./App.jsx";
 import { BrowserRouter } from "react-router-dom";
 
 import "./index.css";
-import Context from "./context";
+import Context from "./context/context";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <BrowserRouter>
